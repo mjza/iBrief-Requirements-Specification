@@ -1,10 +1,10 @@
-Ensuring the continuous availability of data and the ability to recover from unforeseen events is critical for the \textbf{iBrief} application. This section outlines the requirements related to data backup and recovery to provide a robust and resilient system.
+Ensuring the continuous availability of data and the ability to recover from unforeseen events is critical for the \textbf{iBrief} application. This section outlines the requirements related to data \gls{backup} and \gls{recovery} to provide a robust and resilient system.
 
 \begin{enumerate}
     \item \textbf{Regular Backups:}
     \begin{itemize}
         \item The system should perform daily backups of all data, including user profiles, reported issues, logs, and any associated media. 
-        \item Backups should be incremental, with a full backup performed weekly.
+        \item Backups should be incremental, with a full \gls{backup} performed weekly.
     \end{itemize}
     
     \item \textbf{Backup Storage:}
@@ -20,26 +20,26 @@ Ensuring the continuous availability of data and the ability to recover from unf
     
     \item \textbf{Recovery Point Objective (RPO):}
     \begin{itemize}
-        \item The RPO should be set at 24 hours, ensuring that, in the event of a data recovery scenario, no more than 24 hours of data is lost.
+        \item The RPO should be set at 24 hours, ensuring that, in the event of a data \gls{recovery} scenario, no more than 24 hours of data is lost.
     \end{itemize}
 
     \item \textbf{Backup Verification:}
     \begin{itemize}
         \item Backup processes should include verification procedures to ensure that data has been backed up correctly and is recoverable.
-        \item Regular test recoveries should be conducted to verify that backup data can be successfully restored.
+        \item Regular test recoveries should be conducted to verify that \gls{backup} data can be successfully restored.
     \end{itemize}
 
     \item \textbf{Disaster Recovery Plan:}
     \begin{itemize}
-        \item A comprehensive disaster recovery plan should be in place, detailing the steps to be taken in various disaster scenarios.
+        \item A comprehensive disaster \gls{recovery} plan should be in place, detailing the steps to be taken in various disaster scenarios.
         \item This plan should be reviewed and tested periodically to ensure its effectiveness and relevance.
     \end{itemize}
     
     \item \textbf{Documentation:}
     \begin{itemize}
-        \item Detailed documentation should be maintained, outlining backup and recovery procedures, schedules, and responsible personnel.
+        \item Detailed documentation should be maintained, outlining \gls{backup} and \gls{recovery} procedures, schedules, and responsible personnel.
         \item This documentation should be readily available to relevant stakeholders and should be reviewed and updated regularly.
     \end{itemize}
 \end{enumerate}
 
-The \textbf{iBrief} application's backup and recovery requirements aim to safeguard data, ensure application continuity, and minimize downtime. Adhering to these requirements is essential to maintain user trust and the reliability of the service.
+The \textbf{iBrief} application's \gls{backup} and \gls{recovery} requirements aim to safeguard data, ensure application continuity, and minimize downtime. Adhering to these requirements is essential to maintain user trust and the reliability of the service.
