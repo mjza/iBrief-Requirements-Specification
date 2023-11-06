@@ -1,0 +1,45 @@
+Ensuring the continuous availability of data and the ability to recover from unforeseen events is critical for the \textbf{iBrief} application. This section outlines the requirements related to data backup and recovery to provide a robust and resilient system.
+
+\begin{enumerate}
+    \item \textbf{Regular Backups:}
+    \begin{itemize}
+        \item The system should perform daily backups of all data, including user profiles, reported issues, logs, and any associated media. 
+        \item Backups should be incremental, with a full backup performed weekly.
+    \end{itemize}
+    
+    \item \textbf{Backup Storage:}
+    \begin{itemize}
+        \item Backup data should be stored in a geographically separate location from the primary data center to ensure availability in case of regional outages or disasters.
+        \item Backups should be encrypted to maintain data security and integrity.
+    \end{itemize}
+    
+    \item \textbf{Recovery Time Objective (RTO):}
+    \begin{itemize}
+        \item The system should be designed to achieve an RTO of less than 4 hours. This means that in the event of a system failure, the application should be fully operational within 4 hours.
+    \end{itemize}
+    
+    \item \textbf{Recovery Point Objective (RPO):}
+    \begin{itemize}
+        \item The RPO should be set at 24 hours, ensuring that, in the event of a data recovery scenario, no more than 24 hours of data is lost.
+    \end{itemize}
+
+    \item \textbf{Backup Verification:}
+    \begin{itemize}
+        \item Backup processes should include verification procedures to ensure that data has been backed up correctly and is recoverable.
+        \item Regular test recoveries should be conducted to verify that backup data can be successfully restored.
+    \end{itemize}
+
+    \item \textbf{Disaster Recovery Plan:}
+    \begin{itemize}
+        \item A comprehensive disaster recovery plan should be in place, detailing the steps to be taken in various disaster scenarios.
+        \item This plan should be reviewed and tested periodically to ensure its effectiveness and relevance.
+    \end{itemize}
+    
+    \item \textbf{Documentation:}
+    \begin{itemize}
+        \item Detailed documentation should be maintained, outlining backup and recovery procedures, schedules, and responsible personnel.
+        \item This documentation should be readily available to relevant stakeholders and should be reviewed and updated regularly.
+    \end{itemize}
+\end{enumerate}
+
+The \textbf{iBrief} application's backup and recovery requirements aim to safeguard data, ensure application continuity, and minimize downtime. Adhering to these requirements is essential to maintain user trust and the reliability of the service.

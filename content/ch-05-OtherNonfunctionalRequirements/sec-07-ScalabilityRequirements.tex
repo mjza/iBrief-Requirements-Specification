@@ -1,0 +1,45 @@
+The \textbf{iBrief} application is expected to cater to a growing user base and a potentially increasing number of reported issues. To ensure that the application remains performant and responsive as it scales, specific scalability requirements have been identified:
+
+\begin{enumerate}
+    \item \textbf{Horizontal Scalability:} 
+    \begin{itemize}
+        \item The system should support horizontal scalability, allowing for the addition of more servers or instances without any significant changes to the system architecture. This ensures that as the user base and the number of reported issues grow, the system can handle the increased load without a drop in performance.
+    \end{itemize}
+    
+    \item \textbf{Stateless Design:}
+    \begin{itemize}
+        \item Microservices and components of the system should be designed to be stateless, ensuring that any instance can handle any request. This supports load balancing and allows for easy scaling of individual components based on demand.
+    \end{itemize}
+    
+    \item \textbf{Database Scalability:}
+    \begin{itemize}
+        \item The database system should support both vertical and horizontal scaling. This includes the ability to handle read and write-heavy operations, shard databases where necessary, and replicate data across multiple database instances for load distribution and redundancy.
+    \end{itemize}
+    
+    \item \textbf{Auto-Scaling:}
+    \begin{itemize}
+        \item Utilize AWS's auto-scaling capabilities to automatically adjust the number of active instances based on the current traffic and load on the system. This ensures optimal resource usage and cost efficiency.
+    \end{itemize}
+    
+    \item \textbf{Load Balancing:}
+    \begin{itemize}
+        \item Implement load balancers to distribute incoming traffic across multiple instances, ensuring that no single instance is overwhelmed with requests. This supports both high availability and horizontal scalability.
+    \end{itemize}
+    
+    \item \textbf{Optimized Data Storage:}
+    \begin{itemize}
+        \item As the number of reported issues grows, the system should efficiently store and retrieve data. Consider implementing caching mechanisms and optimized database queries to ensure quick data access even with large datasets.
+    \end{itemize}
+    
+    \item \textbf{Microservices Architecture:}
+    \begin{itemize}
+        \item By adopting a microservices architecture, individual components or services of the application can be scaled independently based on their specific requirements and load. This fine-grained scaling ensures that resources are utilized optimally.
+    \end{itemize}
+    
+    \item \textbf{Geographical Scalability:}
+    \begin{itemize}
+        \item As \textbf{iBrief} expands its reach, there might be a need to cater to users from different geographical locations. Implementing a multi-region AWS deployment can ensure low latency access for users from various parts of the world.
+    \end{itemize}
+\end{enumerate}
+
+Ensuring that the \textbf{iBrief} application meets these scalability requirements is pivotal for its success. As the application grows and evolves, its infrastructure should adapt seamlessly to handle increased demand, providing a consistent and high-quality user experience.

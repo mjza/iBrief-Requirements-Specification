@@ -1,0 +1,50 @@
+The \textbf{iBrief} application operates based on a set of business rules that guide its functionalities and ensure consistency, integrity, and conformity to the organizational goals. These rules are intrinsic to the system's design and play a crucial role in managing user interactions, data processing, and system behaviors. The following are the primary business rules requirements:
+
+\begin{itemize}
+    \item \textbf{User Registration and Authentication:} 
+    \begin{itemize}
+        \item Only unique email addresses are allowed for user registration.
+        \item Passwords must meet a specific complexity criterion, including length, alphanumeric characters, and special symbols.
+        \item Users must verify their email addresses before they can report issues.
+    \end{itemize}
+    
+    \item \textbf{Issue Reporting:} 
+    \begin{itemize}
+        \item Users can report issues only within predefined categories. 
+        \item Each reported issue must have a location (either manual entry or GPS-tagged).
+        \item Users cannot report more than a set number of issues within a 24-hour period to prevent spamming.
+    \end{itemize}
+    
+    \item \textbf{AI Pre-processing:}
+    \begin{itemize}
+        \item Offensive words or phrases detected by the AI will be automatically redacted or flagged for review.
+        \item Reports from users consistently flagged for misinformation may be deprioritized or subjected to additional verification.
+    \end{itemize}
+
+    \item \textbf{Dashboard for Authorities and Sales Team:}
+    \begin{itemize}
+        \item Only authorized personnel can access the dashboards.
+        \item Changes made to issue statuses or user accounts must be logged and timestamped.
+    \end{itemize}
+
+    \item \textbf{Integration and Data Exchange:}
+    \begin{itemize}
+        \item Data exports (e.g., analytics, issue data) must be in standard formats (e.g., CSV, JSON).
+        \item Any data imports or exchanges with third-party systems must undergo validation checks to ensure data integrity.
+    \end{itemize}
+
+    \item \textbf{Notifications:}
+    \begin{itemize}
+        \item Users should receive notifications only for issues they reported or subscribed to.
+        \item Push notifications should not be sent more than a set frequency to prevent user annoyance.
+    \end{itemize}
+
+    \item \textbf{Data Retention and Privacy:}
+    \begin{itemize}
+        \item User data should be retained only for a specified period after which it should be anonymized or deleted.
+        \item Users have the right to request the deletion of their accounts and associated data.
+    \end{itemize}
+
+\end{itemize}
+
+Adherence to these business rules ensures that the \textbf{iBrief} application operates transparently, efficiently, and aligns with the organizational vision and user expectations.

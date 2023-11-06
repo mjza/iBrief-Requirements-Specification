@@ -5,37 +5,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for checking spelling 
 \usepackage[english]{babel}
-\usepackage{amsmath}
-\usepackage{complexity}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[pdftex]{graphicx} %%Graphics in pdfLaTeX
-\usepackage{a4wide} %%Smaller margins, more text per page.
-\usepackage{longtable} %%For tables that exceed a page width
-\usepackage{pdflscape} %%Adds PDF support to the landscape environment of package
-\usepackage{caption} %%Provides many ways to customise the captions in floating environments like figure and table
-\usepackage{float} %%Improves the interface for defining floating objects such as figures and tables
-\usepackage[tablegrid,nochapter]{vhistory} %%Vhistory simplifies the creation of a history of versions of a document
-\usepackage[nottoc]{tocbibind} %%Automatically adds the bibliography and/or the index and/or the contents, etc., to the Table of Contents listing
-\usepackage[toc,page]{appendix} %%The appendix package provides various ways of formatting the titles of appendices
-\usepackage{pdfpages} %%This package simplifies the inclusion of external multi-page PDF documents in LATEX documents
-\usepackage[rightcaption]{sidecap} %%Defines environments called SCfigure and SCtable (analogous to figure and table) to typeset captions sideways
-\usepackage{cite} %%The package supports compressed, sorted lists of numerical citations, and also deals with various punctuation and other issues of representation, including comprehensive management of break points
-\usepackage[]{acronym} %%This package ensures that all acronyms used in the text are spelled out in full at least once. It also provides an environment to build a list of acronyms used
-\usepackage[pdftex,scale={.8,.8}]{geometry} %%The package provides an easy and flexible user interface to customize page layout, implementing auto-centering and auto-balancing mechanisms so that the users have only to give the least description for the page layout. For example, if you want to set each margin 2cm without header space, what you need is just \usepackage[margin=2cm,nohead]{geometry}.
-\usepackage{layout} %%The package defines a command \layout, which will show a summary of the layout of the current document
-\usepackage{subfigure} %%Provides support for the manipulation and reference of small or ‘sub’ figures and tables within a single figure or table environment.
-\usepackage[toc]{glossaries} %%The glossaries package supports acronyms and multiple glossaries, and has provision for operation in several languages (using the facilities of either babel or polyglossia).
-\usepackage[left,pagewise,modulo]{lineno} %%Adds line numbers to selected paragraphs with reference possible through the LATEX \ref and \pageref cross reference mechanism
-\usepackage[pdftex,colorlinks=false,hidelinks,pdfstartview=FitV]{hyperref}%%The hyperref package is used to handle cross-referencing commands in LATEX to produce hypertext links in the document. 
+%Smaller margins, more text per page.
+\usepackage{a4wide} 
+%Improves the interface for defining floating objects such as figures and tables
+\usepackage{float} 
+%Vhistory simplifies the creation of a history of versions of a document
+\usepackage[tablegrid,nochapter]{vhistory} 
+%Automatically adds the bibliography and/or the index and/or the contents, etc., to the Table of Contents listing
+\usepackage[nottoc]{tocbibind} 
+%The appendix package provides various ways of formatting the titles of appendices
+\usepackage[toc,page]{appendix} 
+%The package supports compressed, sorted lists of numerical citations, and also deals with various punctuation and other issues of representation, including comprehensive management of break points
+\usepackage{cite} 
+%This package ensures that all acronyms used in the text are spelled out in full at least once. It also provides an environment to build a list of acronyms used
+\usepackage[]{acronym} 
+ %The package provides an easy and flexible user interface to customize page layout, implementing auto-centering and auto-balancing mechanisms so that the users have only to give the least description for the page layout. For example, if you want to set each margin 2cm without header space, what you need is just \usepackage[margin=2cm,nohead]{geometry}.
+\usepackage[pdftex,scale={.8,.8}]{geometry}
+ %The package defines a command \layout, which will show a summary of the layout of the current document
+\usepackage{layout}
+%Provides support for the manipulation and reference of small or ‘sub’ figures and tables within a single figure or table environment.
+\usepackage{subfigure}
+%Adds line numbers to selected paragraphs with reference possible through the LATEX \ref and \pageref cross reference mechanism
+\usepackage[left,pagewise,modulo]{lineno} 
+%The hyperref package is used to handle cross-referencing commands in LATEX to produce hypertext links in the document. 
+\usepackage[pdftex,colorlinks=false,hidelinks,pdfstartview=FitV]{hyperref}
 \usepackage{metainfo}
 \usepackage[pagestyles,raggedright]{titlesec}
 \usepackage{etoolbox}
-\usepackage{%
-	array, %%An extended implementation of the array and tabular environments which extends the options for column formats, and provides "programmable" format specifications
-	booktabs, %%The package enhances the quality of tables in LATEX, providing extra commands as well as behind-the-scenes optimisation
-	dcolumn, %%
+\usepackage{
+	array, %An extended implementation of the array and tabular environments which extends the options for column formats, and provides "programmable" format specifications
+	booktabs, %The package enhances the quality of tables in LATEX, providing extra commands as well as behind-the-scenes optimisation
+	dcolumn, 
 	rotating,
 	shortvrb,
 	units,
@@ -46,6 +48,22 @@
 	qtree,
 	skmath,	
 }
+%The glossaries package supports acronyms and multiple glossaries, and has provision for operation in several languages (using the facilities of either babel or polyglossia).
+\usepackage[toc]{glossaries} 
+% Required for custom color
+\usepackage{xcolor} 
+% Define custom color for glossary links (blue in this example)
+\definecolor{glossarylinkcolor}{rgb}{0.0, 0.0, 0.8} % Adjust as needed
+% Customize hyperref settings to change link color for glossaries
+\hypersetup{
+    colorlinks=true,
+    linkcolor=glossarylinkcolor, % Glossary link color
+    citecolor=glossarylinkcolor, % Citation link color
+    urlcolor=glossarylinkcolor, % URL link color
+    linktoc=all % Make table of contents links in the same color
+}
+% for enum signs 
+\usepackage{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Java --> latex 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
